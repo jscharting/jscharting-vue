@@ -1,12 +1,10 @@
-# JSCharting Vue.js component
-
 <p align="center">
    <a href="https://jscharting.com"><img src="https://jscharting.com/images/jsc-vue-logo.svg" width="400" alt="JSCharting for Vue.js"/></a><br/>
    JavaScript data visualization for Vue.js 
 </p>
 
 <p align="center">
-<a href="https://travis-ci.org/jscharting/jscharting-vue"><img src="https://img.shields.io/travis/jscharting/jscharting-vue.svg?branch=master" alt="Builds"></a>
+<a href="https://travis-ci.com/jscharting/jscharting-vue"><img src="https://img.shields.io/travis/jscharting/jscharting-vue.svg?branch=master" alt="Builds"></a>
 <a href="https://david-dm.org/jscharting/jscharting-vue"><img alt="David" src="https://img.shields.io/david/jscharting/jscharting-vue"></a>
 <a href="https://www.npmjs.com/package/jscharting-vue"><img alt="npm version" src="https://img.shields.io/npm/v/jscharting-vue.svg"></a>
 <a href="https://twitter.com/jscharting/"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fjscharting%2F"></a>
@@ -18,7 +16,7 @@ Example Charts:
 [Chart Types](https://jscharting.com/examples/chart-types/)
 | [Feature Examples](https://jscharting.com/examples/chart-features/)
 
-## Official JSCharting plugin for Vue.js
+# Official JSCharting plugin for Vue.js
 A Vue.js wrapper to use [JSCharting](https://jscharting.com/) charting library as a Vue component.
 ## Table of Contents
 
@@ -31,6 +29,7 @@ A Vue.js wrapper to use [JSCharting](https://jscharting.com/) charting library a
 3. [Chart resources](#chart-resources)
 4. [Getting a chart reference](#getting-a-chart-reference)
 5. [JSCLabel Component](#jsclabel-component)
+6. [JSCGrid Component](#jscgrid-component)
 
 
 
