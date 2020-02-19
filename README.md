@@ -4,8 +4,8 @@
 </p>
 
 <p align="center">
-<a href="https://travis-ci.com/jscharting/jscharting-vue"><img src="https://img.shields.io/travis/jscharting/jscharting-vue.svg?branch=master" alt="Builds"></a>
-<a href="https://david-dm.org/jscharting/jscharting-vue"><img alt="David" src="https://img.shields.io/david/jscharting/jscharting-vue"></a>
+<a href="https://travis-ci.com/jscharting/jscharting-vue"><img src="https://api.travis-ci.com/jscharting/jscharting-vue.svg?token=EngxkSgyx4eVAfadWSRs&branch=master" alt="Builds"></a>
+<a href="https://david-dm.org/jscharting/jscharting-vue"><img alt="David" src="https://david-dm.org/jscharting/jscharting-vue.svg"></a>
 <a href="https://www.npmjs.com/package/jscharting-vue"><img alt="npm version" src="https://img.shields.io/npm/v/jscharting-vue.svg"></a>
 <a href="https://twitter.com/jscharting/"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fjscharting%2F"></a>
 </p>
