@@ -1,0 +1,91 @@
+{
+	"name": "jscharting-vue",
+	"version": "1.1.0-0",
+	"description": "JSCharting plugin for Vue.js",
+	"homepage": "https://jscharting.com/",
+	"author": "JSCharting <support@jscharting.com> (https://jscharting.com/support.htm)",
+	"bugs": {
+		"email": "support@jscharting.com"
+	},
+	"license": "jscharting.com/store/",
+	"main": "./dist/jscharting-vue.common.js",
+	"scripts": {
+		"test": "jest",
+		"build": "npm run format && vue-cli-service build --target lib --name jscharting-vue src/main.js",
+		"build-examples": "cd examples && npm install && npm run build",
+		"start-examples": "cd examples && npm install && npm run start",
+		"lint": "vue-cli-service lint",
+		"format": "prettier --config ./.prettierrc.js --write src/**/*.vue tests/**"
+	},
+	"jest": {
+		"moduleFileExtensions": [
+			"js",
+			"json",
+			"vue"
+		],
+		"transform": {
+			"^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+			".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
+		},
+		"moduleNameMapper": {
+			"^@/(.*)$": "<rootDir>/src/components/$1"
+		}
+	},
+	"dependencies": {
+		"jscharting": "^2.9.0-7"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.8.3",
+		"@babel/preset-env": "^7.8.3",
+		"@vue/cli-plugin-babel": "^4.1.0",
+		"@vue/cli-plugin-eslint": "^4.1.0",
+		"@vue/cli-service": "^4.1.0",
+		"@vue/test-utils": "^1.0.0-beta.31",
+		"babel-core": "^7.0.0-bridge.0",
+		"babel-eslint": "^10.0.3",
+		"core-js": "^3.4.3",
+		"eslint": "^5.16.0",
+		"eslint-plugin-vue": "^5.0.0",
+		"jest": "^25.1.0",
+		"prettier": "^1.19.1",
+		"vue": "^2.6.10",
+		"vue-jest": "^3.0.5",
+		"vue-template-compiler": "^2.6.10"
+	},
+	"eslintConfig": {
+		"root": true,
+		"env": {
+			"node": true,
+			"jest": true
+		},
+		"extends": [
+			"plugin:vue/essential",
+			"eslint:recommended"
+		],
+		"rules": {},
+		"parserOptions": {
+			"parser": "babel-eslint"
+		}
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jscharting/jscharting-vue.git"
+	},
+	"keywords": [
+		"charts",
+		"dataviz",
+		"graphs",
+		"visualization",
+		"javascript-chart",
+		"javascript",
+		"vuejs",
+		"vue"
+	],
+	"files": [
+		"dist/*.js"
+	]
+}
