@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import { JSCharting } from '../src/main.js';
+import { JSCharting } from '../dist/jscharting-vue.common';
 
 const propsData = {
 	options: {

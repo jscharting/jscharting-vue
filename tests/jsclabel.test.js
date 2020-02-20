@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import { JSCLabel } from '../src/main.js';
+import { JSCLabel } from '../dist/jscharting-vue.common';
 
 describe('JSCLabel unit tests', () => {
 	const wrapper = mount(JSCLabel, {

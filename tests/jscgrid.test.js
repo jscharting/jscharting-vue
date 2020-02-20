@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils';
-import { JSCGrid } from '../src/main.js';
+import { JSCGrid } from '../dist/jscharting-vue.common';
 
 describe('JSCGrid unit tests', () => {
 	const wrapper = mount(JSCGrid, {
