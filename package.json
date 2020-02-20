@@ -10,12 +10,12 @@
 	"license": "jscharting.com/store/",
 	"main": "./dist/jscharting-vue.common.js",
 	"scripts": {
-		"test": "jest",
 		"build": "npm run format && vue-cli-service build --target lib --name jscharting-vue src/main.js",
 		"build-examples": "cd examples && npm install && npm run build",
 		"start-examples": "cd examples && npm install && npm run start",
 		"lint": "vue-cli-service lint",
-		"format": "prettier --config ./.prettierrc.js --write src/**/*.vue tests/**"
+		"format": "prettier --config ./.prettierrc.js --write src/**/*.vue tests/**",
+		"test": "npm run build && jest"
 	},
 	"jest": {
 		"moduleFileExtensions": [

@@ -1,14 +1,20 @@
+
 <p align="center">
-   <a href="https://jscharting.com"><img src="https://jscharting.com/images/jsc-vue-logo.svg" width="400" alt="JSCharting for Vue.js"/></a><br/>
+    <br />
+    <br />
+   <a href="https://jscharting.com"><img src="https://jscharting.com/images/jsc-vue-logo.svg" width="400" alt="JSCharting for Vue.js"/></a><br />
    JavaScript data visualization for Vue.js 
 </p>
 
 <p align="center">
-<a href="https://travis-ci.com/jscharting/jscharting-vue"><img src="https://api.travis-ci.com/jscharting/jscharting-vue.svg?token=EngxkSgyx4eVAfadWSRs&branch=master" alt="Builds"></a>
-<a href="https://david-dm.org/jscharting/jscharting-vue"><img alt="David" src="https://david-dm.org/jscharting/jscharting-vue.svg"></a>
+<a href="https://travis-ci.com/jscharting/jscharting-vue"><img src="https://img.shields.io/travis/com/jscharting/jscharting-vue.svg?branch=master" alt="Builds"></a>
+<a href="https://david-dm.org/jscharting/jscharting-vue"><img alt="David" src="https://img.shields.io/david/jscharting/jscharting-vue"></a>
 <a href="https://www.npmjs.com/package/jscharting-vue"><img alt="npm version" src="https://img.shields.io/npm/v/jscharting-vue.svg"></a>
-<a href="https://twitter.com/jscharting/"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fjscharting%2F"></a>
+<img alt="code style" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg">
+<a href="https://twitter.com/jscharting/"><img alt="Twitter" src="https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Ftwitter.com%2Fjscharting%2F"></a> <br />
 </p>
+
+<br />
 
 **JSCharting** is a JavaScript data visualization library offering seamless usage with Vue across all devices and platforms. Every JSCharting license includes a full suite of 150+ chart types including standards such as pie charts, line charts, donut and bar charts. In addition, advanced chart types including Gantt charts, JavaScript Org Charts, interactive charts for stock and finance, seamless grid and calendar charts, JavaScript maps, sparklines, and micro charts all for no additional charge. JSCharting has all the features you need and many you don't yet know you want.
 
