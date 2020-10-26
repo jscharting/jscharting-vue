@@ -28,7 +28,7 @@ describe('JSCharting unit tests', () => {
 	const chart = wrapper.vm.instance;
 
 	test('Wrapper is a Vue instance', () => {
-		expect(wrapper.isVueInstance()).toBeTruthy();
+		expect(wrapper.exists()).toBeTruthy();
 	});
 
 	test('Component has JSCharting instance', () => {
