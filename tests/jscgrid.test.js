@@ -18,7 +18,7 @@ describe('JSCGrid unit tests', () => {
 	});
 
 	test('Wrapper is a Vue instance', () => {
-		expect(wrapper.isVueInstance()).toBeTruthy();
+		expect(wrapper.exists()).toBeTruthy();
 	});
 
 	test('Grid should be destroyed after component is destroyed.', () => {

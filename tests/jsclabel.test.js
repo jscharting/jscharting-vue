@@ -8,7 +8,7 @@ describe('JSCLabel unit tests', () => {
 	const element = wrapper.element;
 
 	test('Wrapper is a Vue instance', () => {
-		expect(wrapper.isVueInstance()).toBeTruthy();
+		expect(wrapper.exists()).toBeTruthy();
 	});
 
 	test('Label data is set correctly', () => {
