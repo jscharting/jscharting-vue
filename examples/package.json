@@ -1,6 +1,6 @@
 {
 	"name": "jscharting-vue-examples",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"description": "Examples using the JSCharting plugin for React.",
 	"scripts": {
 		"start": "vue-cli-service serve",
@@ -13,13 +13,13 @@
 	},
 	"license": "jscharting.com/store/",
 	"dependencies": {
-		"core-js": "^3.6.5",
-		"jscharting-vue": "^1.2.1",
+		"core-js": "^3.8.3",
+		"jscharting-vue": "^1.2.2",
 		"vue": "^2.6.12"
 	},
 	"devDependencies": {
-		"@vue/cli-plugin-babel": "^4.5.8",
-		"@vue/cli-service": "^4.5.8",
+		"@vue/cli-plugin-babel": "^4.5.11",
+		"@vue/cli-service": "^4.5.11",
 		"copy-webpack-plugin": "^5.1.2",
 		"vue-template-compiler": "^2.6.12"
 	},

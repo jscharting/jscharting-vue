@@ -241,7 +241,7 @@ export default {
 
 ### Chart resources
 The JSCharting library includes resources (modules, mapping data, polyfills, icons library) that load automatically
-when they are needed. The `examples/` webpack build copies these resources to the `./dist/jsc/` folder.
+when they are needed. The `examples/` webpack build copies these resources to the `./dist/assets/jscharting` folder.
 The examples app component `examples/src/App.vue` file calls the `JSC.defaults()` function to set `baseUrl` option with this path globally in
 its constructor. All subsequent charts will be aware of the location of these resources.
 
