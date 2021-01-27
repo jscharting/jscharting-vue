@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.2.2] - 2021-01-27
+
+### Changed
+- Update JSCharting version to v3.0.2
+
 ## [1.2.1] - 2020-10-27
 
 ### Changed
