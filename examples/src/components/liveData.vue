@@ -5,11 +5,8 @@
 </style>
 
 <template>
-	<JSCharting
-		:options="options()"
-		class="liveData"
-		:callback="start.bind(this)"
-	></JSCharting>
+	<JSCharting :options="options()" class="liveData" @rendered="start">
+	</JSCharting>
 </template>
 
 <script>
@@ -19,41 +16,13 @@ export default {
 	beforeDestroy: function() {
 		clearInterval(this.INTERVAL_ID);
 	},
+	name: 'liveData',
 	data() {
 		return {
-			name: 'liveData',
 			INTERVAL_ID: 0,
 			date: new Date(2020, 0, 10).getTime(),
 			chart: null,
 			useShift: true,
-			playPause: val => {
-				if (val === true) {
-					clearInterval(this.INTERVAL_ID);
-				} else {
-					this.start(this.chart);
-				}
-			},
-			shiftPoints_btnClick: shiftVal => {
-				this.useShift = shiftVal;
-			},
-			start: chart => {
-				const me = this;
-				me.chart = chart;
-				me.INTERVAL_ID = setInterval(function() {
-					if (chart) {
-						me.addData(chart);
-					}
-				}, 800);
-			},
-			addData: chart => {
-				chart
-					.series(0)
-					.points.add(
-						{ y: Math.random() * 200, x: new Date(this.date) },
-						{ shift: this.useShift }
-					);
-				this.date = this.date + 24 * 3600000 * 2;
-			},
 			options: () => ({
 				debug: true,
 				legend_position: 'inside top right',
@@ -111,14 +80,38 @@ export default {
 			})
 		};
 	},
+	methods: {
+		playPause(val) {
+			if (val === true) {
+				clearInterval(this.INTERVAL_ID);
+			} else {
+				this.start(this.chart);
+			}
+		},
+		shiftPoints_btnClick(shiftVal) {
+			this.useShift = shiftVal;
+		},
+		start(chart) {
+			const me = this;
+			me.chart = chart;
+			me.INTERVAL_ID = setInterval(function() {
+				if (chart) {
+					me.addData(chart);
+				}
+			}, 800);
+		},
+		addData(chart) {
+			chart
+				.series(0)
+				.points.add(
+					{ y: Math.random() * 200, x: new Date(this.date) },
+					{ shift: this.useShift }
+				);
+			this.date = this.date + 24 * 3600000 * 2;
+		}
+	},
 	components: {
 		JSCharting
 	}
 };
-
-function randomPoints() {
-	return data.map((row, i) => {
-		return { id: 'p' + i, x: row[0], y: Math.random() * 10 };
-	});
-}
 </script>

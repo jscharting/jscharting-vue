@@ -1,64 +1,68 @@
-<style>
-.methodUpdate {
-	height: 400px;
-}
-</style>
-
 <template>
 	<div>
-		<JSCharting :options="options" class="methodUpdate"></JSCharting>
-		<button v-on:click="updateData">Update Data</button>
+		<JSCharting :options="options" style="height:400px;"></JSCharting>
+		<button v-on:click="updateData">Update Chart Data</button>
 	</div>
 </template>
 
 <script>
 import JSCharting from 'jscharting-vue';
 
-const data = [
-	['1/1/2020', 29.9],
-	['1/2/2020', 71.5],
-	['1/3/2020', 106.4],
-	['1/6/2020', 129.2],
-	['1/7/2020', 144.0],
-	['1/8/2020', 176.0]
-];
-
 export default {
+	name: 'methodUpdate',
 	data() {
-		return {
-			name: 'methodUpdate',
-			updateData: () => {
-				this.options = {
-					series: [
-						{
-							name: 'Purchases',
-							points: randomPoints()
-						}
-					]
-				};
+		let options = {
+			type: 'line spline',
+			title: { label: { text: 'Series updates' } },
+			legend: {
+				position: 'inside top right'
 			},
-			options: {
-				type: 'line',
-				title_label_text: 'Series updates',
-				legend_position: 'inside bottom right',
-				xAxis: { scale_type: 'time' },
+			xAxis: { scale: { type: 'time' } },
+			defaultPoint: {
+				marker: {
+					outline: {
+						width: 2,
+						color: 'currentColor'
+					},
+					fill: 'white'
+				}
+			},
+			series: [
+				{
+					name: 'Purchases',
+					points: this.randomPoints()
+				}
+			]
+		};
+		return {
+			options
+		};
+	},
+	methods: {
+		updateData() {
+			this.options = {
 				series: [
 					{
 						name: 'Purchases',
-						points: randomPoints()
+						points: this.randomPoints()
 					}
 				]
+			};
+		},
+		randomPoints() {
+			let points = [];
+			for (let i = 1; i < 12; i++) {
+				points.push({
+					id: 'p' + i,
+					x: `1/${i * 2}/2020`,
+					y: Math.random() * 10
+				});
 			}
-		};
+			return points;
+		}
 	},
 	components: {
 		JSCharting
 	}
 };
-
-function randomPoints() {
-	return data.map((row, i) => {
-		return { id: 'p' + i, x: row[0], y: Math.random() * 10 };
-	});
-}
 </script>

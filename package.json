@@ -1,6 +1,6 @@
 {
 	"name": "jscharting-vue",
-	"version": "1.2.2",
+	"version": "2.0.0-beta",
 	"description": "JSCharting plugin for Vue.js",
 	"homepage": "https://jscharting.com/",
 	"author": "JSCharting <support@jscharting.com> (https://jscharting.com/support.htm)",
@@ -8,49 +8,33 @@
 		"email": "support@jscharting.com"
 	},
 	"license": "jscharting.com/store/",
-	"main": "./dist/jscharting-vue.common.js",
+	"main": "./src/main.js",
+	"typings": "types/jscharting-vue.d.ts",
 	"scripts": {
-		"build": "npm run format && vue-cli-service build --target lib --name jscharting-vue src/main.js",
 		"build-examples": "cd examples && npm install && npm run build",
-		"start-examples": "cd examples && npm install && npm run start",
-		"lint": "vue-cli-service lint",
-		"format": "prettier --config ./.prettierrc.js --write src/**/*.vue tests/**",
-		"test": "npm run build && jest"
-	},
-	"jest": {
-		"moduleFileExtensions": [
-			"js",
-			"json",
-			"vue"
-		],
-		"transform": {
-			"^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-			".*\\.(vue)$": "<rootDir>/node_modules/vue-jest"
-		},
-		"moduleNameMapper": {
-			"^@/(.*)$": "<rootDir>/src/components/$1"
-		}
+		"build-examples-vue3": "cd examples-vue3 && npm install && npm run build",
+		"serve-examples": "cd examples && npm install && npm run serve",
+		"serve-examples-vue3": "cd examples-vue3 && npm install && npm run serve",
+		"lint": "eslint src/components/** scripts/** ",
+		"format": "prettier --config ./.prettierrc.js --write src/**/*.vue tests/** scripts/**",
+		"postinstall": "node ./scripts/postinstall.js"
 	},
 	"dependencies": {
-		"jscharting": "^3.0.2"
+		"jscharting": "^3.0.3-beta"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.3",
 		"@babel/preset-env": "^7.8.3",
-		"@vue/cli-plugin-babel": "^4.1.0",
-		"@vue/cli-plugin-eslint": "^4.1.0",
-		"@vue/cli-service": "^4.1.0",
-		"@vue/test-utils": "^1.0.0-beta.31",
+		"@vue/compiler-sfc": "^3.0.7",
 		"babel-core": "^7.0.0-bridge.0",
 		"babel-eslint": "^10.0.3",
 		"core-js": "^3.4.3",
 		"eslint": "^5.16.0",
 		"eslint-plugin-vue": "^5.0.0",
-		"jest": "^25.1.0",
-		"prettier": "^1.19.1",
-		"vue": "^2.6.10",
-		"vue-jest": "^3.0.5",
-		"vue-template-compiler": "^2.6.10"
+		"prettier": "^1.19.1"
+	},
+	"peerDependencies": {
+		"vue": "^2.6.10 || >=3.0.5"
 	},
 	"eslintConfig": {
 		"root": true,
@@ -86,6 +70,10 @@
 		"vue"
 	],
 	"files": [
-		"dist/*.js"
+		"src/",
+		"types/",
+		"scripts/",
+		"*.md",
+		"babel.config.js"
 	]
 }

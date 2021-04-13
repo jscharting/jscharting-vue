@@ -12,9 +12,9 @@
 import { JSCGrid } from 'jscharting-vue';
 
 export default {
+	name: 'dataGrid',
 	data() {
 		return {
-			name: 'dataGrid',
 			options: {
 				className: 'jscTable',
 				data: [

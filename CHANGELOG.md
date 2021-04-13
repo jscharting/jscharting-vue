@@ -1,5 +1,24 @@
 # Changelog
 
+## [2.0.0] - 2021-04-13
+
+### Breaking Change
+- The `callback` prop was removed and is now the `@rendered` event
+
+### Changed
+- Revised Readme.md documentation
+- npm `start` script renamed to `serve` in examples
+- Update JSCharting version to v3.0.3
+- Revised all examples
+
+### Added
+- Component Typings
+- @rendered event
+- Vue3 Support
+- Vue3 Examples 
+- Vue3 Documentation
+- New Examples
+
 ## [1.2.2] - 2021-01-27
 
 ### Changed

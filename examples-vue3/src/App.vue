@@ -27,67 +27,73 @@
 	</div>
 </template>
 
-<script>
-import { JSC } from 'jscharting-vue';
+<script lang="ts">
+import * as JSC from 'jscharting';
+import { defineComponent } from 'vue';
 
 import simpleLine from './components/simpleLine.vue';
-import interactiveLine from './components/interactiveLine.vue';
 import chartDash from './components/chartDash.vue';
-import calendarHeatmap from './components/calendarHeatmap.vue';
-import circularColorBar from './components/circularColorBar.vue';
 import circularGauge from './components/circularGauge.vue';
-import microchartFast from './components/microchartFast.vue';
+import circularColorBar from './components/circularColorBar.vue';
+import interactiveLine from './components/interactiveLine.vue';
+import calendarHeatmap from './components/calendarHeatmap.vue';
+import dataGrid from './components/dataGrid.vue';
 import mapChoropleth from './components/mapChoropleth.vue';
 import methodUpdate from './components/methodUpdate.vue';
 import liveData from './components/liveData.vue';
 import masterDetail from './components/masterDetail.vue';
-import dataGrid from './components/dataGrid.vue';
+import microchartFast from './components/microchartFast.vue';
 import chartDataGrid from './components/chartDataGrid.vue';
 
-export default {
-	name: 'app',
+export default defineComponent({
+	name: 'App',
 	data() {
 		return {
 			selected: 'simpleLine',
 			examples: [
-        { file: 'simpleLine', name: 'Line' },
-        { file: 'chartDash', name: 'Dashboard' },
-        { file: 'circularGauge', name: 'Gauge' },
-        { file: 'circularColorBar', name: 'Color Bar' },
-        { file: 'interactiveLine', name: 'Interactivity' },
-        { file: 'mapChoropleth', name: 'Map Choropleth' },
-        { file: 'calendarHeatmap', name: 'Calendar Heatmap' },
-        { file: 'methodUpdate', name: 'Method Update' },
-        { file: 'microchartFast', name: 'Microchart' },
-        { file: 'liveData', name: 'Live Data' },
-        { file: 'masterDetail', name: 'Master Detail' },
-        { file: 'dataGrid', name: 'Data Grid' },
-        { file: 'chartDataGrid', name: 'Chart Grid Switch' }
+				{ file: 'simpleLine', name: 'Line' },
+				{ file: 'chartDash', name: 'Dashboard' },
+				{ file: 'circularGauge', name: 'Gauge' },
+				{ file: 'circularColorBar', name: 'Color Bar' },
+				{ file: 'interactiveLine', name: 'Interactivity' },
+				{ file: 'mapChoropleth', name: 'Map Choropleth' },
+				{ file: 'calendarHeatmap', name: 'Calendar Heatmap' },
+				{ file: 'methodUpdate', name: 'Method Update' },
+				{ file: 'microchartFast', name: 'Microchart' },
+				{ file: 'liveData', name: 'Live Data' },
+				{ file: 'masterDetail', name: 'Master Detail' },
+				{ file: 'dataGrid', name: 'Data Grid' },
+				{ file: 'chartDataGrid', name: 'Chart Grid Switch' }
 			]
 		};
 	},
 	components: {
 		simpleLine,
-    chartDash,
-    circularGauge,
-    circularColorBar,
-    interactiveLine,
-    mapChoropleth,
-    calendarHeatmap,
-    methodUpdate,
-    microchartFast,
+		chartDash,
+		circularGauge,
+		circularColorBar,
+		interactiveLine,
+		mapChoropleth,
+		calendarHeatmap,
+		methodUpdate,
+		microchartFast,
 		liveData,
 		masterDetail,
 		dataGrid,
-    chartDataGrid
+		chartDataGrid
 	},
 	beforeCreate: function() {
 		JSC.defaults({ baseUrl: './assets/jscharting/' });
 	}
-};
+});
 </script>
 
-<style>
+<style scoped>
+#app {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 .samples {
 	font-family: sans-serif;
 	max-width: 800px;

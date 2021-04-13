@@ -93,9 +93,10 @@ const configB = () => ({
 });
 
 export default {
+	name: 'masterDetail',
 	mounted: function() {
 		const me = this;
-		JSC.fetch('https://data.cdc.gov/resource/fvae-a8ai.csv')
+		fetch('https://data.cdc.gov/resource/fvae-a8ai.csv')
 			.then(function(response) {
 				return response.text();
 			})
@@ -112,32 +113,33 @@ export default {
 	},
 	data() {
 		return {
-			name: 'masterDetail',
 			dataObject: undefined,
 			configA: configA(),
-			configB: configB(),
-			getSeries: () => {
-				const me = this;
-				return JSC.nest()
-					.key('age_group')
-					.key('year')
-					.rollup('birth_number')
-					.series(me.dataObject);
-			},
-			updateDetailChart: range => {
-				if (this.$refs.chartB) {
-					const chartDetail = this.$refs.chartB.instance,
-						chart = this.$refs.chartA.instance;
-					//Update marker position on main chart.
-					chart
-						.axes('x')
-						.markers(0)
-						.options({ value: range });
-					//Update details chart zoom
-					chartDetail.axes('x').zoom(range);
-				}
-			}
+			configB: configB()
 		};
+	},
+	methods: {
+		getSeries() {
+			const me = this;
+			return JSC.nest()
+				.key('age_group')
+				.key('year')
+				.rollup('birth_number')
+				.series(me.dataObject);
+		},
+		updateDetailChart(range) {
+			if (this.$refs.chartB) {
+				const chartDetail = this.$refs.chartB.instance,
+					chart = this.$refs.chartA.instance;
+				//Update marker position on main chart.
+				chart
+					.axes('x')
+					.markers(0)
+					.options({ value: range });
+				//Update details chart zoom
+				chartDetail.axes('x').zoom(range);
+			}
+		}
 	},
 	components: {
 		JSCharting

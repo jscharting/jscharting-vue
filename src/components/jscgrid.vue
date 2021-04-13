@@ -31,7 +31,6 @@ export default {
 			}
 		},
 		renderGrid: function() {
-			const cb = this.callback;
 			const options = this.options;
 			const updateExisting = this.instance && this.mutable !== false;
 			if (updateExisting) {
@@ -41,7 +40,7 @@ export default {
 				const containerElement = this.$el;
 				JSC.Grid(containerElement, options).then(grid => {
 					this.instance = grid;
-					cb && cb(grid);
+					this.$emit('rendered', grid);
 				});
 			}
 		}

@@ -1,4 +1,6 @@
 /node_modules/**
 /examples/**
-/dist/*.html
+/examples-vue3/**
+/tests/
 /.idea/*
+/tests/**
