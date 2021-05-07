@@ -1,5 +1,5 @@
 <template>
-	<div :class="className"></div>
+	<div></div>
 </template>
 
 <script>
@@ -7,10 +7,8 @@ import * as JSC from 'jscharting';
 export default {
 	name: 'JSCGrid',
 	props: {
-		options: Object,
-		mutable: undefined,
-		callback: Function,
-		className: String
+		options: { type: Object, required: true },
+		mutable: { type: Boolean, default: true }
 	},
 	mounted: function() {
 		this.renderGrid();

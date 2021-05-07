@@ -7,6 +7,7 @@
 </p>
 
 <p align="center">
+<a href="https://travis-ci.com/jscharting/jscharting-vue"><img src="https://img.shields.io/travis/com/jscharting/jscharting-vue.svg?branch=master" alt="Builds"></a>
 <a href="https://david-dm.org/jscharting/jscharting-vue"><img alt="David" src="https://img.shields.io/david/jscharting/jscharting-vue"></a>
 <a href="https://www.npmjs.com/package/jscharting-vue"><img alt="npm version" src="https://img.shields.io/npm/v/jscharting-vue.svg"></a>
 <img alt="code style" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg">
@@ -58,7 +59,7 @@ yarn add jscharting-vue
 
 
 #### Run Examples
-Clone the (Github repo)[https://github.com/jscharting/jscharting-vue] locally. Example charts are located in the `/examples` folder.
+Clone the [Github repo](https://github.com/jscharting/jscharting-vue) locally. Example charts are located in the `/examples` folder.
 
 To view the examples you can run the webpack dev server: localhost:8080
 
@@ -475,7 +476,6 @@ The available options for the data grid component are.
 | --------- | :----: | ----------- |
 | `:options` | object | JSCGrid configuration object. Please refer to the [API documentation](https://jscharting.com/documentation/#node=Home.API.json.Types.grid). |
 | `:mutable` | boolean | (Optional) When set to true, `grid.options()` is called with the updated props instead of recreating the grid instance.
-| `:className` | string | (Optional) Applies the class name to the grid container div element. It allows controlling grid size and layout with external CSS. |
 | `@rendered` | event | Triggered when the grid is finished rendering. The first argument of the event handler is a reference to the created grid.|
 
 ```typescript

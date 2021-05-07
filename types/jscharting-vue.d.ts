@@ -10,8 +10,6 @@ export interface ChartPropsObject {
 	options: JSC.JSCChartConfig;
 	mutable?: boolean;
 	ignoreStateUpdate?: boolean;
-	className?: string;
-	callback?: () => void;
 }
 
 export default class JSCharting extends Vue {
@@ -30,8 +28,6 @@ export default class JSCharting extends Vue {
 export interface GridPropsObject {
 	options: JSC.JSCGridConfig;
 	mutable?: boolean;
-	className?: string;
-	callback?: () => void;
 }
 
 export class JSCGrid extends Vue {

@@ -7,6 +7,7 @@
 </p>
 
 <p align="center">
+<a href="https://travis-ci.com/jscharting/jscharting-vue"><img src="https://img.shields.io/travis/com/jscharting/jscharting-vue.svg?branch=master" alt="Builds"></a>
 <a href="https://david-dm.org/jscharting/jscharting-vue"><img alt="David" src="https://img.shields.io/david/jscharting/jscharting-vue"></a>
 <a href="https://www.npmjs.com/package/jscharting-vue"><img alt="npm version" src="https://img.shields.io/npm/v/jscharting-vue.svg"></a>
 <img alt="code style" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg">
@@ -57,7 +58,7 @@ yarn add jscharting-vue
 
 
 #### Run Examples
-Clone the (Github repo)[https://github.com/jscharting/jscharting-vue] locally. Example charts are located in the `/examples-vue3` folder.
+Clone the [Github repo](https://github.com/jscharting/jscharting-vue)  locally. Example charts are located in the `/examples-vue3` folder.
 
 To view the examples you can run the webpack dev server: localhost:3333
 

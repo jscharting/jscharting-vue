@@ -12,7 +12,7 @@
 			<div class="examplesItems">
 				<button
 					v-for="item in examples"
-					v-bind:key="item"
+					v-bind:key="item.file"
 					v-on:click="selected = item.file"
 					v-bind:class="{ selected: selected === item.file }"
 					class="btn"

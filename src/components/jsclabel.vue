@@ -7,7 +7,7 @@ import * as JSC from 'jscharting';
 export default {
 	name: 'JSCLabel',
 	props: {
-		options: String
+		options: { type: String, default: '' }
 	},
 	mounted: function() {
 		this.renderLabel();

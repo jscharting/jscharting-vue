@@ -1,6 +1,17 @@
 # Changelog
 
-## [2.0.0] - 2021-04-13
+
+## [2.0.0-beta.2] - 2021-05-07
+
+### Changed
+- Adjusted grid and label props definitions
+- Sync definitions in jscharting-vue.d.ts
+- Tweak readme
+
+### Added
+- Tests
+
+## [2.0.0-beta] - 2021-04-13
 
 ### Breaking Change
 - The `callback` prop was removed and is now the `@rendered` event
