@@ -13,6 +13,7 @@
 			v-if="dataLoaded"
 			:options="chartOptions"
 			@rendered="selectSeries"
+      style="height:400px;"
 		/>
 	</div>
 </template>

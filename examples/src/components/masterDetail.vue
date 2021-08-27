@@ -1,12 +1,12 @@
 <style>
 .chartA {
 	max-width: 700px;
-	height: 400px;
+	height: 250px;
 	margin: 0 auto;
 }
 .chartB {
 	max-width: 700px;
-	height: 250px;
+	height: 450px;
 	margin: 0 auto;
 }
 </style>

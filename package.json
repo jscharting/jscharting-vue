@@ -1,6 +1,6 @@
 {
 	"name": "jscharting-vue",
-	"version": "2.0.0-beta.2",
+	"version": "2.1.0",
 	"description": "JSCharting plugin for Vue.js",
 	"homepage": "https://jscharting.com/",
 	"author": "JSCharting <support@jscharting.com> (https://jscharting.com/support.htm)",
@@ -35,7 +35,7 @@
 		}
 	},
 	"dependencies": {
-		"jscharting": "^3.0.3-beta"
+		"jscharting": "^3.1.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.3",
