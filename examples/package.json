@@ -1,6 +1,6 @@
 {
 	"name": "jscharting-vue-examples",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"description": "Examples using the JSCharting plugin for Vue.js.",
 	"private": true,
 	"scripts": {
@@ -15,7 +15,7 @@
 	"license": "jscharting.com/store/",
 	"dependencies": {
 		"core-js": "^3.8.3",
-		"jscharting-vue": "2.1.0",
+		"jscharting-vue": "2.2.0",
 		"vue": "^2.6.10"
 	},
 	"devDependencies": {
