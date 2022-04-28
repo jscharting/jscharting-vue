@@ -1,5 +1,9 @@
 # Changelog
 
+## [2.3.1] - 2022-4-28
+
+- Update JSCharting version to [v3.3.1](https://github.com/jscharting/jscharting-dist/blob/master/CHANGELOG.md#331---2022-4-28)
+
 ## [2.3.0] - 2022-4-6
 
 - Update JSCharting version to v3.3.0
