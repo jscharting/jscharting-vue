@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import { Chart } from 'jscharting';
+import * as JSC from 'jscharting';
 
 export default {
 	name: 'JSCharting',
@@ -54,7 +54,7 @@ export default {
 		},
 		renderChart(options) {
 			this.destroyChart();
-			this.instance = new Chart(
+			this.instance = new JSC.Chart(
 				options.targetElement || this.$el,
 				options,
 				chart => this.$emit('rendered', chart)
